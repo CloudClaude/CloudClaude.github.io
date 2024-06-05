@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <p>Цена недвижимости: </p><p><input type="number" name="price" required></p>
+    <p>Первоначальный взнос: </p><p><input type="number" name="fpayment"  required></p>
+    <p>Срок в годах: </p><p></p><input type="number" name="duration"  required></p>
+    <p>Ставка: </p><p><input type="float" name="percent"  required></p>
+    <p><button type="submit"><font size = "5">Рассчитать</font></button></p>
+    <p>Ежемесячный платеж:</p><p>{{payment}} рублей</p>
+    <p>Переплата по кредиту:</p><p>{{overprice}} рублей</p>
+    <p>Сумма кредита:</p><p>{{credit}} рублей</p>
+    <p>Общая выплата по кредиту:</p><p>{{fullpayment}} рублей</p>
+</form>
+{% endblock %}
